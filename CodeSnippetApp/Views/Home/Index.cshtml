@@ -1,0 +1,82 @@
+﻿@model IEnumerable<CodeSnippet>
+
+@{
+    ViewData["Title"] = "Home - Code Snippet Manager";
+}
+
+<div class="container mt-5">
+    <!-- Introduction Section -->
+    <div class="text-center">
+        <h1 class="display-4 text-primary">Welcome to Code Snippet Manager</h1>
+        <p class="lead">Store, organize, and manage your code snippets in various programming languages with ease.</p>
+        <hr class="my-4" />
+        <p class="mb-5">Code Snippet Manager is a tool designed for developers to save and manage their frequently used code snippets. It supports multiple programming languages and offers easy editing, deletion, and viewing features.</p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mb-5 text-center">
+        <div class="col-md-4">
+            <div class="card border-primary mb-3">
+                <div class="card-body">
+                    <h4 class="card-title text-primary"><i class="bi bi-plus-circle"></i> Create Snippets</h4>
+                    <p class="card-text">Easily create and store your code snippets for later use. Add descriptions and organize by language.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-info mb-3">
+                <div class="card-body">
+                    <h4 class="card-title text-info"><i class="bi bi-pencil-square"></i> Edit Snippets</h4>
+                    <p class="card-text">Make quick edits to your saved snippets whenever you need to update them.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-danger mb-3">
+                <div class="card-body">
+                    <h4 class="card-title text-danger"><i class="bi bi-trash"></i> Delete Snippets</h4>
+                    <p class="card-text">No longer need a snippet? You can delete any of your stored snippets with just a click.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supported Languages Section -->
+    <div class="row text-center mb-5">
+        <h2 class="mb-4 text-primary">Supported Languages</h2>
+        <div class="col-md-4">
+            <div class="card border-light">
+                <div class="card-body">
+                    <h4><i class="bi bi-code-slash"></i> Java</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-black">
+                <div class="card-body">
+                    <h4><i class="bi bi-code-slash"></i> C#</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-light">
+                <div class="card-body">
+                    <h4><i class="bi bi-code-slash"></i> Python</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <!-- Call to Action -->
+    <div class="text-center mb-5">
+        <a asp-controller="CodeSnippet" asp-action="Create" class="btn btn-lg btn-primary">
+            <i class="bi bi-plus-circle"></i> &nbsp; Start Adding Snippets
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a asp-controller="CodeSnippet" asp-action="Index" class="btn btn-lg btn-outline-secondary">
+            <i class="bi bi-card-list"></i> &nbsp; View All Snippets
+        </a>
+    </div>
+</div>

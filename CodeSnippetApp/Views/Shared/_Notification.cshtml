@@ -1,0 +1,30 @@
+﻿
+@{
+    if (TempData["success"] != null)
+    {
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript">
+            Swal.fire({
+                title: 'Success!',
+                text: '@TempData["success"]',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+        </script>
+    }
+}
+
+@{
+    if (TempData["ErrorMessage"] != null)
+    {
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript">
+            Swal.fire({
+                title: 'Error!',
+                text: '@TempData["ErrorMessage"]',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        </script>
+    }
+}
